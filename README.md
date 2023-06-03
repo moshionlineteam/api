@@ -13,7 +13,7 @@ Returns information about a player in Moshi Online.
 - `monster` (string): The monster associated with the player.
 - `joined` (integer): The date when the player joined Moshi Online.
 - `views` (integer): The number of views the player has.
-- `rank` (integer): The rank of the player.
+- `rank` (string): The rank of the player.
 - `rocks` (integer): The number of rocks the player has.
 - `level` (integer): The level of the player.
 - `level_progress` (integer): The progress towards the next level for the player.
@@ -31,7 +31,7 @@ GET https://moshionline.net/api?player=johndoe
   "monster": "furi",
   "joined": 60000,
   "views": 256,
-  "rank": 10,
+  "rank": "Member",
   "rocks": 500,
   "level": 5,
   "level_progress": 80
@@ -58,7 +58,14 @@ Returns the highscore information for a specific game in Moshi Online.
 | 11  | Thump Glump                    |
 | 13  | Shouty Shack                   |
 | 21  | The Great Moshi Beanstalk      |
+| 91  | Blue Jeeper's Flight           |
+| 92  | Bug's Big Bounce               |
+| 93  | Downhill Dash                  |
+| 94  | Octo's Eco Adventure           |
+| 95  | Sea Monster Munch              |
+| 96  | Ecto's Cave                    |
 | 100 | The Daily Challenge            |
+
 
 **Response:**
 - `game` (string): The name of the game.
@@ -91,3 +98,41 @@ GET https://moshionline.net/api?highscore=1
   ]
 }
 ```
+
+
+## Endpoint: `https://moshionline.net/api?codes`
+
+Retrieves an array of codes with their associated details.
+
+**Example Request:**
+```
+GET https://moshionline.net/api?codes
+```
+
+**Example Response:**
+```json
+    [
+      {
+        "code": "YAYABBY134",
+        "prize": "150",
+        "type": "ROX",
+        "status": true
+      },
+      {
+        "code": "PORT",
+        "prize": "Wiggly Wallpaper",
+        "type": "ACCESSORY",
+        "status": true
+      },
+      ...
+    ]
+```
+
+**Description**
+
+An array of code objects. Each object represents a code and contains the following properties:
+
+- `code` (string): The code value.
+- `prize` (string): The associated prize for the code.
+- `type` (string): The type or category of the code.
+- `status` (boolean): Indicates the status of the code. `true` represents an active code, and `false` represents an inactive code.
