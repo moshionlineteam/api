@@ -104,6 +104,14 @@ GET https://moshionline.net/api?highscore=1
 
 Retrieves an array of codes with their associated details.
 
+**Response**:
+
+- (array): An array of codes objects.
+  - `code` (string): The code value.
+  - `prize` (string): The associated prize for the code.
+  - `type` (string): The type or category of the code.
+  - `status` (boolean): Indicates the status of the code. `true` represents an active code, and `false` represents an inactive code.
+
 **Example Request:**
 ```
 GET https://moshionline.net/api?codes
@@ -127,12 +135,3 @@ GET https://moshionline.net/api?codes
       ...
     ]
 ```
-
-**Description**
-
-An array of code objects. Each object represents a code and contains the following properties:
-
-- `code` (string): The code value.
-- `prize` (string): The associated prize for the code.
-- `type` (string): The type or category of the code.
-- `status` (boolean): Indicates the status of the code. `true` represents an active code, and `false` represents an inactive code.
