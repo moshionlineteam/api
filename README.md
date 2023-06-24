@@ -13,7 +13,8 @@ Returns information about a player in Moshi Online.
 - `monster` (string): The monster associated with the player.
 - `joined` (integer): The date when the player joined Moshi Online.
 - `views` (integer): The number of views the player has.
-- `rank` (string): The rank of the player.
+- `games_played` (integer): The number of games that the player has played.
+- `banned` (boolean): The banned status of the player.
 - `rocks` (integer): The number of rocks the player has.
 - `level` (integer): The level of the player.
 - `level_progress` (integer): The progress towards the next level for the player.
@@ -31,7 +32,8 @@ GET https://moshionline.net/api?player=johndoe
   "monster": "furi",
   "joined": 60000,
   "views": 256,
-  "rank": "Member",
+  "games_played": 0,
+  "banned": false,
   "rocks": 500,
   "level": 5,
   "level_progress": 80
@@ -134,4 +136,42 @@ GET https://moshionline.net/api?codes
       },
       ...
     ]
+```
+
+
+## Endpoint: `https://moshionline.net/api?blog`
+
+Retrieves a list of blog posts.
+
+**Parameters:**
+- `id` (optional): Get Blog by ID.
+
+**Response**:
+
+- `id` (integer): The unique identifier for the blog post.
+- `title` (string): The title of the blog post.
+- `description` (string): The description of the blog post.
+- `thumbnail` (string): The URL of the thumbnail image for the blog post.
+- `category` (string): The category of the blog post.
+- `date` (integer): The date of the blog post (in UNIX timestamp format).
+
+
+**Example Request:**
+```
+GET https://moshionline.net/api?blog
+```
+
+**Example Response:**
+```json
+[
+  {
+    "id": 1,
+    "title": "Sample Blog Post",
+    "description": "This is a sample blog post.",
+    "thumbnail": "https://example.com/thumbnail.jpg",
+    "category": "Fashion",
+    "date": 1632278400
+  },
+  ...
+]
 ```
