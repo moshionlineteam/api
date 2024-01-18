@@ -141,7 +141,7 @@ This endpoint retrieves highscores for a specific game.
 - **difficulty:** Difficulty level of the game.
 - **score:** Score achieved by the player.
 
-- # 6. Statistics
+## 6. Statistics
 
 To access statistics, an internal server key is required.
 
@@ -194,7 +194,7 @@ Gets all the game information that staff might care about.
 - **total_seeds_owned:** Total number of seeds owned.
 - **total_codes_redeemed:** Total number of codes redeemed.
 
-# 7. Player Lookup
+## 7. Player Lookup
 
 To perform a player lookup, an API key is *currently* required.
 
