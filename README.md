@@ -140,3 +140,91 @@ This endpoint retrieves highscores for a specific game.
 - **user:** Username of the player.
 - **difficulty:** Difficulty level of the game.
 - **score:** Score achieved by the player.
+
+- # 6. Statistics
+
+To access statistics, an internal server key is required.
+
+### Endpoint: `https://moshionline.net/api?statistics` [GET]
+
+Gets all the game information that staff might care about.
+
+#### Response Example:
+```json
+{
+  "total_users": 0,
+  "active_today": 0,
+  "daily_users": 0,
+  "yesterday_users": 0,
+  "weekly_users": 0,
+  "monthly_users": 0,
+  "staff_users": 0,
+  "banned_users": 0,
+  "total_games": 0,
+  "total_missions": 0,
+  "total_puzzles": 0,
+  "total_messages": 0,
+  "total_gifts": 0,
+  "total_mysterygifts": 0,
+  "total_moshlings_owned": 0,
+  "total_items_owned": 0,
+  "total_clothing_owned": 0,
+  "total_seeds_owned": 0,
+  "total_codes_redeemed": 0
+}
+```
+
+- **total_users:** Total number of registered users.
+- **active_today:** Number of users active today.
+- **daily_users:** Number of users who logged in today.
+- **yesterday_users:** Number of users who logged in yesterday.
+- **weekly_users:** Number of users active in the last week.
+- **monthly_users:** Number of users active in the last month.
+- **staff_users:** Number of staff members.
+- **banned_users:** Number of banned users.
+- **total_games:** Total number of games available.
+- **total_missions:** Total number of missions created.
+- **total_puzzles:** Total number of puzzles available.
+- **total_messages:** Total number of messages sent.
+- **total_gifts:** Total number of gifts given.
+- **total_mysterygifts:** Total number of mystery gifts given.
+- **total_moshlings_owned:** Total number of Moshlings owned.
+- **total_items_owned:** Total number of items owned.
+- **total_clothing_owned:** Total number of clothing items owned.
+- **total_seeds_owned:** Total number of seeds owned.
+- **total_codes_redeemed:** Total number of codes redeemed.
+
+# 7. Player Lookup
+
+To perform a player lookup, an API key is currently required.
+
+### Endpoint: `https://moshionline.net/api?player&player=[USERNAME]` [GET]
+
+This endpoint provides information about a specific player.
+
+#### Response Example:
+```json
+{
+  "username": "dummy_player",
+  "monstar": "A",
+  "monster": "furi",
+  "joined": 1685163202,
+  "views": 500,
+  "games_played": 20,
+  "banned": false,
+  "rocks": 300,
+  "level": 3,
+  "level_progress": 30,
+  "success": true
+}
+```
+- **username:** Player's username.
+- **monstar:** Monstar level.
+- **monster:** Player's chosen monster.
+- **joined:** Timestamp of when the player joined.
+- **views:** Number of times the player has been viewed.
+- **games_played:** Number of games played by the player.
+- **banned:** Whether the player is banned or not.
+- **rocks:** Total rox owned by the player.
+- **level:** Player's level.
+- **level_progress:** Player's progress towards the next level.
