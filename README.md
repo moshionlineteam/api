@@ -176,15 +176,15 @@ Gets all the game information that staff might care about.
 
 - **total_users:** Total number of registered users.
 - **active_today:** Number of users active today.
-- **daily_users:** Number of users who logged in today.
-- **yesterday_users:** Number of users who logged in yesterday.
-- **weekly_users:** Number of users active in the last week.
-- **monthly_users:** Number of users active in the last month.
+- **daily_users:** Number of users who registered today.
+- **yesterday_users:** Number of users who registered yesterday.
+- **weekly_users:** Number of users registered in the last week.
+- **monthly_users:** Number of users registered in the last month.
 - **staff_users:** Number of staff members.
 - **banned_users:** Number of banned users.
-- **total_games:** Total number of games available.
-- **total_missions:** Total number of missions created.
-- **total_puzzles:** Total number of puzzles available.
+- **total_games:** Total number of games played.
+- **total_missions:** Total number of missions played.
+- **total_puzzles:** Total number of puzzles played.
 - **total_messages:** Total number of messages sent.
 - **total_gifts:** Total number of gifts given.
 - **total_mysterygifts:** Total number of mystery gifts given.
@@ -196,7 +196,7 @@ Gets all the game information that staff might care about.
 
 # 7. Player Lookup
 
-To perform a player lookup, an API key is currently required.
+To perform a player lookup, an API key is *currently* required.
 
 ### Endpoint: `https://moshionline.net/api?player&player=[USERNAME]` [GET]
 
